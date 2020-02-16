@@ -4,6 +4,15 @@
         <meta charset="utf-8">
         <title>Demo Stripe-Vue-Node</title>
         <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+        <style>
+            .item,
+            .separator {
+                margin-bottom: 16px;
+            }
+            .img-responsive {
+                width: 350px;
+            }
+        </style>
     </head>
 
     <body>
@@ -19,9 +28,10 @@
         <template id="item-template">
             <div class="item clearfix">
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-                    <img :src="image" class="img-responsive" />
+                    <img :src="image" class="img-responsive">
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                <hr class="separator hidden-md-down">
+                <div class="content col-xs-12 col-sm-6 col-md-7 col-lg-8">
                     <p class="text-left">
                         {{ description }}
                     </p>
