@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo Stripe-Vue-Node</title>
+        <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="container">Test Stripe with Vue Payments</h1>
+            <div id="app">
+                <item-component :identifier="1"></item-component>
+                <item-component :identifier="2"></item-component>
+                <h3 class="container col-xs-12">Order Status {{ order_status }}</h3>
+            </div>
+        </div>
+
+        <template id="item-template">
+            <div class="item clearfix">
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                    <img :src="image" class="img-responsive" />
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                    <p class="text-left">
+                        {{ description }}
+                    </p>
+                    <p>
+                        <strong>£{{ price / 100 }}</strong>
+                    </p>
+                    <button class="btn btn-primary btn-lg" @click.prevent="purchaseStuff()">PURCHASE</button>
+                </div>
+            </div>
+        </template>
+
+        <script src="https://unpkg.com/vue@2.0.1/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/2.0.0/vuex.min.js"></script>
+        <script src="https://unpkg.com/vue-resource@1.0.3/dist/vue-resource.min.js"></script>
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+        <script src="js/vue-stripe-component.js"></script>
+    </body>
+</html>
