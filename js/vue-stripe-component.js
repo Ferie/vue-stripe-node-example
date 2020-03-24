@@ -43,7 +43,7 @@ const itemComponent = Vue.component('item-component', {
         var instance = this;
         store.state.stripe_instance = StripeCheckout.configure({
             key: 'pk_test_FGNm2dFi9gHpxGB0OCsTI8vd',    //put your own publishable key here
-            image: 'https://www.gbenergysupply.co.uk/images/emails/logo.jpg',
+            image: 'https://images.app.goo.gl/FhCAm54TyJeLNpNw5',
             locale: 'auto',
             token: function(token) {
                 console.log('got a token. sending data to localhost');
@@ -55,8 +55,8 @@ const itemComponent = Vue.component('item-component', {
     methods: {
         purchaseStuff: function () {
             store.state.stripe_instance.open({
-                name: 'GB Energy Supply',
-                description: 'GB Energy Supply direct payment',
+                name: 'Riccardo Andreatta',
+                description: 'Riccardo Andreatta direct payment',
                 currency: 'GBP',
                 amount: store.state['item' + this.identifier].price
             })
