@@ -43,7 +43,7 @@ const itemComponent = Vue.component('item-component', {
         var instance = this;
         store.state.stripe_instance = StripeCheckout.configure({
             key: 'pk_test_FGNm2dFi9gHpxGB0OCsTI8vd',    //put your own publishable key here
-            image: 'https://images.app.goo.gl/FhCAm54TyJeLNpNw5',
+            image: 'https://scontent.flhr2-2.fna.fbcdn.net/v/t1.0-9/971181_186600011495788_1725648979_n.png?_nc_cat=111&_nc_sid=85a577&_nc_ohc=TQrq9ooANCUAX8H--Zt&_nc_ht=scontent.flhr2-2.fna&oh=04c719462abba0243bc926f34902d1f3&oe=5EA12346',
             locale: 'auto',
             token: function(token) {
                 console.log('got a token. sending data to localhost');
